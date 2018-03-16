@@ -2,8 +2,9 @@
 
 - A support ticket application built using the Laravel framework.
 
-- For impatient people :) who want to check the application in action visit 
-http://support-ticket-app.herokuapp.com/login
+- For impatient people :) who want to check the application visit 
+
+    http://support-ticket-app.herokuapp.com/login
 
 ## Getting Started
 
@@ -19,9 +20,9 @@ composer on your machine).
         composer install
 
 ## Setting Up
-- First setup your database. The details of database are mentioned in the .env file. You are free to keep it as it is or 
-change it to your liking. (Remember the project does not have a .env file, you need to create one when you clone the 
-repo. A reference env.example file is provided)
+- First setup your database. The details of database should be mentioned in the .env file. You are free to keep it as it 
+is or change it to your liking. (Remember the project does not have a .env file, you need to create one when you clone 
+the repo. A reference env.example file is provided)
 
 - Run the following command
 
@@ -32,5 +33,5 @@ successfully. If not revisit earlier steps. After migrations are setup run the f
 
         php artisan serve
 
-and visit [http://localhost:8000/](http://localhost:8000/) to see the application in action on your local machine.
+and visit [http://localhost:8000/](http://localhost:8000/) to see the application on your local machine.
 
