@@ -3,9 +3,22 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Ticket extends Model
 {
+    use Sortable;
+
+    public $sortable = [
+        'id',
+        'name',
+        'title',
+        'status',
+        'category_id',
+        'email',
+        'created_at',
+        'updated_at'
+    ];
 	/**
 	 * The attributes that are mass assignable.
 	 * 

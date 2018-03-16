@@ -27,3 +27,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 });
 
 Route::post('comment', 'CommentsController@postComment');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

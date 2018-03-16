@@ -14,13 +14,13 @@
 	        		@if ($tickets->isEmpty())
 						<p>You have not created any tickets.</p>
 	        		@else
-		        		<table class="table">
+		        		<table class="table table-striped">
 		        			<thead>
 		        				<tr>
-		        					<th>Category</th>
-		        					<th>Title</th>
-		        					<th>Status</th>
-		        					<th>Last Updated</th>
+		        					<th>@sortablelink('category_id', 'Category')</th>
+		        					<th>@sortablelink('title', 'Title')</th>
+		        					<th>@sortablelink('status', 'Status')</th>
+		        					<th class="sortable-handle">@sortablelink('updated_at', 'Last Updated')</th>
 		        				</tr>
 		        			</thead>
 		        			<tbody>

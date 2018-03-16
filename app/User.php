@@ -3,9 +3,23 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Kyslik\ColumnSortable\Sortable;
 
 class User extends Authenticatable
 {
+    use Sortable;
+
+    public $sortable = [
+        'id',
+        'name',
+        'title',
+        'status',
+        'category',
+        'email',
+        'created_at',
+        'updated_at'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
