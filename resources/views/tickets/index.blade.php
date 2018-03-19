@@ -17,10 +17,10 @@
 		        		<table class="table">
 		        			<thead>
 		        				<tr>
-		        					<th>Category</th>
-		        					<th>Title</th>
-		        					<th>Status</th>
-		        					<th>Last Updated</th>
+		        					<th>@sortablelink('category_id','Category')</th>
+		        					<th>@sortablelink('title', 'Title')</th>
+		        					<th>@sortablelink('status', 'Status')</th>
+		        					<th>@sortablelink('updated_at', 'Last Updated')</th>
 		        					<th style="text-align:center" colspan="2">Actions</th>
 		        				</tr>
 		        			</thead>

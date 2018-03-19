@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Ticket;
+use Charts;
+
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +28,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $chart = Charts::database(Ticket::all(), 'pie', 'highcharts')
+            ->title("Ticket Status")
+            ->elementLabel("Tickets")
+            ->dimensions(1000, 500)
+            ->responsive(true)
+            ->groupBy('status');
+
+
+        return view('home', compact('chart'));
     }
 }

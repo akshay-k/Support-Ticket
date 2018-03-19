@@ -10,13 +10,18 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <p>You are logged in!</p>
-
                     @if (Auth::user()->is_admin)
                         <p>
                             See all <a href="{{ url('admin/tickets') }}">tickets</a>
                         </p>
+                        <br>
+                        <div>
+                            {!! $chart->html() !!}
+                            {!! Charts::scripts() !!}
+                            {!! $chart->script() !!}
+                        </div>
                     @else
+                        <p>You are logged in!</p>
                         <p>
                             See all your <a href="{{ url('my_tickets') }}">tickets</a> or <a href="{{ url('new_ticket') }}">open new ticket</a>
                         </p>
